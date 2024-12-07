@@ -30,7 +30,7 @@
 }
 
 .portfolio-container::-webkit-scrollbar {
-    height: 2px;
+    height: 10px;
 }
 .portfolio-container::-webkit-scrollbar-thumb {
     background: rgb(16, 16, 16); 
