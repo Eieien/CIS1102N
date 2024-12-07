@@ -1,0 +1,180 @@
+#home{
+    display: flex;
+    min-height: 100vh;
+    font-family: Montserrat, sans-serif;
+}
+
+
+.sidebar{
+    width: 30px;
+    height: 100vh;
+    background-color: rgb(16, 16, 16);
+    border-right: 1px solid rgb(178, 157, 157);
+    color: white;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    
+    position: fixed;
+    
+    .sidebar-menu{
+        display: flex;
+        justify-content: space-between;
+        height: 100%;
+        padding-bottom: 20px;
+        align-items: center;
+        flex-direction: column;
+        
+        li{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 15px 10px 15px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+
+        }
+
+        li:hover{
+            background-color: rgb(44, 44, 44);
+            
+            i{
+                color: rgb(255, 255, 255);
+                font-size: 1.3rem;
+            }
+        }
+
+        i{
+            font-size: 1.2rem;
+            -webkit-font-smoothing: antialiased; 
+            -moz-osx-font-smoothing: grayscale; 
+            font-smooth: always;
+            color: rgb(178, 157, 157);
+            transition:
+            color 0.3s ease,
+            font-size 0.3s ease;
+        }
+
+        
+
+        .tooltip-container {
+            position: relative;
+            cursor: pointer;
+        }
+        
+        .tooltip {
+            visibility: hidden; 
+            background-color: #333; 
+            color: rgb(255, 255, 255); 
+            text-align: center;
+            padding: 8px;
+            border-radius: 4px;
+            position: absolute;
+            top: 50%;
+            left: 125%;
+            transform: translateY(-50%);
+            white-space: nowrap;
+            z-index: 1;
+            opacity: 0; 
+            transition: opacity 0.3s;
+        }
+
+        .tooltip::after {
+            content: "";
+            position: absolute;
+            top: 50%; 
+            right: 100%;
+            transform: translateY(-50%);
+            border-width: 5px;
+            border-style: solid;
+            border-color: transparent transparent transparent #333; /* Right-pointing arrow */
+        }
+
+        .tooltip-container:hover .tooltip {
+            visibility: visible;
+            opacity: 1; 
+        }
+
+        .list-of-portfolios{
+            display: none; 
+            position: fixed; 
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%; 
+            height: 100%; 
+            overflow: auto; 
+            background-color: rgb(0,0,0);
+            background-color: rgba(0,0,0,0.4); 
+            cursor: default;
+            overflow-y: hidden;
+        }
+
+        .portfolio-list{
+            cursor: default;
+            background-color: rgb(16, 16, 16);
+            margin: 9% auto;
+            padding: 20px;
+            border: 3px solid rgb(255, 255, 255);
+            border-radius: 10px;
+            color: rgb(255, 255, 255);
+            width: 60%; 
+        }
+        .close{
+            color: rgb(178, 157, 157);
+            float: right;
+            background-color: transparent;
+            border-style: solid;
+            border: none;
+            font-size: 28px;
+            font-weight: bold;
+            transition: 
+            color 0.3s ease;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+        }
+
+        a{
+            text-decoration: none;
+            color: inherit;
+        }
+
+
+        #transfer{
+            display: flex;
+            width: 100%;
+            flex-direction: column;
+            height: 2%;
+            
+            p{
+                margin: 2px 0 0 0 ;
+                padding: 10px 20px 10px 20px;
+                font-size: 1rem;
+                color: rgb(178, 157, 157);
+                border-radius: 10px;
+                transition: 
+                background-color 0.3s ease,
+                font-size 0.3s ease,
+                color 0.3s ease,
+                font-weight 0.3s ease;
+            }
+            p:hover{
+                background-color: rgb(41, 41, 41);
+                border-radius: 10px;
+                font-size: 1.2rem;
+                font-weight: bold;
+                color: rgb(255, 255, 255)      
+            }   
+        }
+    }
+}
+
+.content{
+    margin-left: 40px;
+    flex-grow: 1;
+}
+
