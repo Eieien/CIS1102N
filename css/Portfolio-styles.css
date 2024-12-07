@@ -50,6 +50,23 @@ span{
     margin-bottom: 0;
 }
 
+.info-for-me{
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    p{
+        font-weight: bold;
+        margin-top: 0;
+    }
+
+    div{
+        p{
+            font-weight: normal;
+            margin-bottom: 0;
+        }
+    }
+}
+
 
 #Black-section{
     display: flex;
